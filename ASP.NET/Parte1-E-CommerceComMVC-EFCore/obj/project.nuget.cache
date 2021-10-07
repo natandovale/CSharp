@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XL8nYZ0PRpYaEK/7Wt9E6iWWUKJ3ru/PCGGwvmubyx1XarLQuErUPAqFQtz1pbl5vGxLSxs7bBxUmxvfyC4klQ==",
+  "dgSpecHash": "JtR2q66Sr0qI01FY90WHvaaylTBULLy6FAsXBBUBWNZ0WbIm0qHhKXUhL5q/D4MM4qnaclwe+zSr6cc2ey7G/g==",
   "success": true,
-  "projectFilePath": "C:\\Repositorios\\Estudos\\Alura\\MVC-E-Comerce\\MVC-E-Comerce.csproj",
+  "projectFilePath": "C:\\Repositorios\\Estudos\\Alura\\EstudoALuraGitHub\\ASP.NET\\Parte1-E-CommerceComMVC-EFCore\\MVC-E-Comerce.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

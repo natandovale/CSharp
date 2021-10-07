@@ -31,12 +31,16 @@ namespace MVC_E_Comerce
             var livros = new List<Livro>();
             livros.Add(new Livro("9834", "Livro1", 12.23m));
             livros.Add(new Livro("9835", "Livro2", 12.99m));
+            livros.Add(new Livro("9836", "Livro3", 15.99m));
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Olaa!");
+                    foreach (var livro in livros )
+                    {
+                        await context.Response.WriteAsync($"{livro.Codigo,-10}{livro.Nome,-40}{livro.Preco.ToString("C"),10}\r\n");
+                    }
                 });
             });
         }
