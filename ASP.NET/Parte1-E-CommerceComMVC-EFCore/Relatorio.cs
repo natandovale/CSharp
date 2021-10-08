@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MVC_E_Comerce
 {
-    public class Relatorio
+    public class Relatorio : IRelatorio
     {
-        private readonly Catalogo _catalogo;
+        private readonly ICatalogo _catalogo;
 
-        public Relatorio(Catalogo catalogo)
+        public Relatorio(ICatalogo catalogo)
         {
             this._catalogo = catalogo;
         }

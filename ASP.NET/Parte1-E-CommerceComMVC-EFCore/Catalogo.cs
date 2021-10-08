@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MVC_E_Comerce
 {
-    public class Catalogo
+    public class Catalogo : ICatalogo
     {
         public List<Livro> GetLivros()
         {

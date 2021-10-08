@@ -16,10 +16,11 @@ namespace MVC_E_Comerce
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<ICatalogo,Catalogo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -28,8 +29,8 @@ namespace MVC_E_Comerce
 
             app.UseRouting();
 
-            Catalogo catologo = new Catalogo();
-            Relatorio relatorio = new Relatorio(catologo);
+            ICatalogo catologo = serviceProvider.GetService<ICatalogo>();
+            IRelatorio relatorio = new Relatorio(catologo);
 
             app.UseEndpoints(endpoints =>
             {
