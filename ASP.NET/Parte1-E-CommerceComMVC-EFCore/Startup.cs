@@ -17,6 +17,7 @@ namespace MVC_E_Comerce
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ICatalogo,Catalogo>();
+            services.AddTransient<IRelatorio,Relatorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,7 +31,7 @@ namespace MVC_E_Comerce
             app.UseRouting();
 
             ICatalogo catologo = serviceProvider.GetService<ICatalogo>();
-            IRelatorio relatorio = new Relatorio(catologo);
+            IRelatorio relatorio = serviceProvider.GetService<IRelatorio>();
 
             app.UseEndpoints(endpoints =>
             {
