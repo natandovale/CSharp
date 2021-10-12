@@ -12,9 +12,9 @@ namespace ByteBank.SistemaAgencia
         private ContaCorrente[] _itens;
         private int _proximaPosicao;
 
-        public ListaDeContaCorrente()
+        public ListaDeContaCorrente(int capacidadeInicial = 5)
         {
-            _itens = new ContaCorrente[5];
+            _itens = new ContaCorrente[capacidadeInicial];
             _proximaPosicao = 0;
         }
 
@@ -28,12 +28,14 @@ namespace ByteBank.SistemaAgencia
 
         private void VerificarCapacidade(int tamanhoNecessario)
         {
+            int novoTamanho = _itens.Length * 2; 
+
             if (_itens.Length >= tamanhoNecessario)
             {
-                return;
+                novoTamanho = tamanhoNecessario;
             }
 
-            ContaCorrente[] novoArray = new ContaCorrente[tamanhoNecessario];
+            ContaCorrente[] novoArray = new ContaCorrente[novoTamanho];
 
             Console.WriteLine("Aumentando capacidade da lista!");
 
