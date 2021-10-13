@@ -26,14 +26,48 @@ namespace ByteBank.SistemaAgencia
             _proximaPosicao++;
         }
 
+        public void Remover(ContaCorrente item)
+        {
+            int indiceItem = -1;
+            //Descobrindo o indice do array que vou excluir.
+            for (int i = 0; i < _proximaPosicao; i++)
+            {
+                if (_itens[i].Equals(item))
+                {
+                    indiceItem = i;
+                    break;
+                }
+            }
+
+            for (int i = indiceItem; i < _proximaPosicao - 1; i++)
+            {
+                _itens[i] = _itens[i + 1];
+            }
+
+            _proximaPosicao--;
+            _itens[_proximaPosicao] = null;
+        }
+
+        public void EscreverListaNaTela()
+        {
+            for (int i = 0; i < _proximaPosicao; i++)
+            {
+                ContaCorrente conta = _itens[i];
+                Console.WriteLine($"Conta numero {conta.Agencia} {conta.Numero}");
+            }
+        }
+
+
         private void VerificarCapacidade(int tamanhoNecessario)
         {
-            int novoTamanho = _itens.Length * 2; 
+            
 
             if (_itens.Length >= tamanhoNecessario)
             {
-                novoTamanho = tamanhoNecessario;
+                return;
             }
+
+            int novoTamanho = _itens.Length * 2;
 
             ContaCorrente[] novoArray = new ContaCorrente[novoTamanho];
 
