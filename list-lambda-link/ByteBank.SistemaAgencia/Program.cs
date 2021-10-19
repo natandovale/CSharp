@@ -27,13 +27,22 @@ namespace ByteBank.SistemaAgencia
             //contas.Sort();
             //contas.Sort(new ComparadorContaCorrentePorAgencia());
 
-            var contasOrdenadas = contas.OrderBy(conta => conta.Numero);
+            var contasOrdenadas = contas.OrderBy(conta =>
+            {
+                if (conta == null)
+                {
+                    return int.MaxValue;
+                }
+                return conta.Numero;
+            });
 
             foreach (var conta in contasOrdenadas)
             {
-                Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+                if (conta != null)
+                {
+                    Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+                }
             }
-
 
             Console.ReadLine();
         }
@@ -55,9 +64,6 @@ namespace ByteBank.SistemaAgencia
                 Console.WriteLine(nome);
             }
 
-
-
-
             var idades = new List<int>();
 
             idades.Add(1);
@@ -71,7 +77,6 @@ namespace ByteBank.SistemaAgencia
             // ListExtensoes.AdicionarVarios(idades, 45, 89, 12);
 
             idades.AdicionarVarios(99, -1);
-
 
             idades.Sort();
 
@@ -108,7 +113,6 @@ namespace ByteBank.SistemaAgencia
             return acumulador;
         }
 
-
         static void TestaListaDeContaCorrente()
         {
             //ListaDeContaCorrente lista = new ListaDeContaCorrente();
@@ -143,8 +147,6 @@ namespace ByteBank.SistemaAgencia
                 Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
             }
         }
-
-
 
         static void TestaArrayDeContaCorrente()
         {
