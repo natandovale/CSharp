@@ -28,7 +28,7 @@ namespace ByteBank.SistemaAgencia.Comparadores
 
             if (x.Agencia < y.Agencia)
             {
-                return -1;
+                return -1; //x fica na frente y
             }
 
             if (x.Agencia == y.Agencia)
@@ -36,7 +36,11 @@ namespace ByteBank.SistemaAgencia.Comparadores
                 return 0;
             }
 
-            return 1;
+            return 1; // y fica na frente x
+
+            //Nossas comparações de numeros inteiros é equivalente 
+            //ao que já existe no tipo INT
+            //return x.Agencia.CompareTo(y.Agencia);
         }
     }
 }
