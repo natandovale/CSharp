@@ -28,5 +28,16 @@ namespace Dicionario
             // cria a relação no Dictionary
             alunos.Add(aluno.NumeroMatricula, aluno);
         }
+
+        //internal Aluno BuscaMatriculado(int numero)
+        //{
+        //    return alunos[numero];
+        //}
+        internal Aluno BuscaMatriculado(int numero)
+        {
+            Aluno result = null;
+            this.alunos.TryGetValue(numero, out result);
+            return result;
+        }
     }
 }
