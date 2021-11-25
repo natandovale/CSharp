@@ -25,7 +25,7 @@ namespace ByteBank.SistemaAgencia
             _proximaPosicao = 0;
         }
 
-        public void MeuMetodo(string texto = "texti padrao", int numero = 5)
+        public void MeuMetodo(string texto = "texto padrao", int numero = 5)
         {
 
         }
