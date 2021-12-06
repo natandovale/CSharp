@@ -19,6 +19,10 @@ namespace ByteBank
             {
                 Console.WriteLine("CATCH NO METODO MAIN");
             }
+            catch (SaldoInsuficienteException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.WriteLine("Execução finalizada. Tecle enter para sair");
             Console.ReadLine();

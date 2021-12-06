@@ -1,0 +1,16 @@
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\bin\Debug\net5.0\SortedList.exe
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\bin\Debug\net5.0\SortedList.deps.json
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\bin\Debug\net5.0\SortedList.runtimeconfig.json
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\bin\Debug\net5.0\SortedList.runtimeconfig.dev.json
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\bin\Debug\net5.0\SortedList.dll
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\bin\Debug\net5.0\ref\SortedList.dll
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\bin\Debug\net5.0\SortedList.pdb
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.csproj.AssemblyReference.cache
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.AssemblyInfoInputs.cache
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.AssemblyInfo.cs
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.csproj.CoreCompileInputs.cache
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.dll
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\ref\SortedList.dll
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.pdb
+C:\Repositorios\Estudos\Alura\EstudoALuraGitHub\Collections2\Collections2\ListasLigadas\obj\Debug\net5.0\SortedList.genruntimeconfig.cache
