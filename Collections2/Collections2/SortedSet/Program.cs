@@ -32,7 +32,7 @@ namespace SortedSet
             Alunos.IntersectWith(outroConjunto);
 
             //somente em um ou outro conjunto - SymmetricExceptWith
-            Alunos.SymmetricExceptWith(outroConjunto;
+            Alunos.SymmetricExceptWith(outroConjunto);
 
             //união de conjuntos - UnionWith
             Alunos.UnionWith(outroConjunto);
