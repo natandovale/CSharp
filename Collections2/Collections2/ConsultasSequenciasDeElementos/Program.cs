@@ -30,6 +30,31 @@ namespace ConsultasSequenciasDeElementos
             {
                 Console.WriteLine(item);
             }
+
+            //Pegar os meses depois do primeiro trimestre
+            var consulta2 = meses.Skip(3);
+
+            //Pegar os 3 primeiros meses do terceiro trimestre
+            var consulta3 = meses.Skip(6).Take(3);
+
+            //Pegar os meses até que o mês comece com a letra 's'
+            var consulta4 = meses.TakeWhile(m => !m.Nome.StartsWith("S"));
+
+            //Pular os meses até que o mês comece com a letra 's'
+            var consulta5 = meses.SkipWhile(m => !m.Nome.StartsWith("S"));
+
+            string[] seq1 = { "janeiro", "fevereiro", "março" };
+            string[] seq2 = { "fevereiro", "MARÇO", "abril" };
+
+            Console.WriteLine("concatenando duas sequências");
+            seq1.Concat(seq2);
+
+            Console.WriteLine("união de duas sequências");
+            seq1.Union(seq2);
+
+            Console.WriteLine("união de duas sequências com comparador IgnoreCase");
+            seq1.Union(seq2, StringComparer.InvariantCultureIgnoreCase);
+
         }
 
         public class Mounth : IComparable
