@@ -6,11 +6,14 @@ namespace ConversoesDeCollections
     {
         static void Main(string[] args)
         {
+            //No C#, a covariância e a contravariância habilitam a conversão de referência implícita para tipos de matriz, 
+            //tipos de delegados e argumentos de tipo genérico. A covariância preserva a compatibilidade de atribuição, e 
+            //a contravariância reverte.
             Console.WriteLine("string para object");
             string titulo = "meses";
             object obj = titulo;
             Console.WriteLine(obj);
-
+           
             //IList<object> listaObj = listaMeses;
             Console.WriteLine();
 
