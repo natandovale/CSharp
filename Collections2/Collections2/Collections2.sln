@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JaggedArrays", "JaggedArray
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultandoCollections", "ConsultandoCollections\ConsultandoCollections.csproj", "{D19E75EB-139E-4373-873E-D448E4279A78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultasSequenciasDeElementos", "ConsultasSequenciasDeElementos\ConsultasSequenciasDeElementos.csproj", "{86090C1F-967F-46A5-80F0-A7F7BD7FD2AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultasSequenciasDeElementos", "ConsultasSequenciasDeElementos\ConsultasSequenciasDeElementos.csproj", "{86090C1F-967F-46A5-80F0-A7F7BD7FD2AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversoesDeCollections", "ConversoesDeCollectios\ConversoesDeCollections.csproj", "{5EB80AA3-C79A-43E7-8D3F-FBA6BECBDD30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{86090C1F-967F-46A5-80F0-A7F7BD7FD2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86090C1F-967F-46A5-80F0-A7F7BD7FD2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86090C1F-967F-46A5-80F0-A7F7BD7FD2AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB80AA3-C79A-43E7-8D3F-FBA6BECBDD30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB80AA3-C79A-43E7-8D3F-FBA6BECBDD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB80AA3-C79A-43E7-8D3F-FBA6BECBDD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB80AA3-C79A-43E7-8D3F-FBA6BECBDD30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
