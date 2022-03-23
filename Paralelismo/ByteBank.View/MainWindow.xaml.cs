@@ -32,44 +32,59 @@ namespace ByteBank.View
             r_Servico = new ContaClienteService();
         }
 
-        private void BtnProcessar_Click(object sender, RoutedEventArgs e)
+        private async void BtnProcessar_Click(object sender, RoutedEventArgs e)
         {
-            var taskSchedulerUI = TaskScheduler.FromCurrentSynchronizationContext();
             BtnProcessar.IsEnabled = false;
+
             var contas = r_Repositorio.GetContaClientes();
 
-            var contas_parte1 = contas.Take(contas.Count() / 2);
-            var contas_parte2 = contas.Skip(contas.Count() / 2);
+            PgsProgresso.Maximum = contas.Count();
 
-            var resultado = new List<string>();
-
-            AtualizarView(new List<string>(), TimeSpan.Zero);
+            LimparView();
 
             var inicio = DateTime.Now;
 
-            var contasTarefas = contas.Select(conta =>
-            {
-                return Task.Factory.StartNew(() =>
-                {
-                    var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
-                    resultado.Add(resultadoConta);
-                });
-            }).ToArray();
+            var resultado = await ConsolidarContas(contas);
+            var fim = DateTime.Now;
+            AtualizarView(resultado, fim - inicio);
+            BtnProcessar.IsEnabled = true;
 
-            Task.WhenAll(contasTarefas)
-                .ContinueWith(task =>
-                {
-                    var fim = DateTime.Now;
-                    AtualizarView(resultado, fim - inicio);
-                    BtnProcessar.IsEnabled = true;
-                }, taskSchedulerUI);
-                
         }
 
-        private void AtualizarView(List<String> result, TimeSpan elapsedTime)
+        private void LimparView()
+        {
+            LstResultados.ItemsSource = null;
+            TxtTempo.Text = null;
+            PgsProgresso.Value = 0;
+        }
+
+        private async Task<string[]> ConsolidarContas(IEnumerable<ContaCliente> contas)
+        {
+            var taskSchedulerGui = TaskScheduler.FromCurrentSynchronizationContext();
+            var tasks = contas.Select(conta =>
+                Task.Factory.StartNew(() =>
+                {
+                    var resultadoConsolidacao = r_Servico.ConsolidarMovimentacao(conta);
+
+                    Task.Factory.StartNew(
+                        () => PgsProgresso.Value++,
+                        CancellationToken.None,
+                        TaskCreationOptions.None,
+                        taskSchedulerGui
+                        );
+
+                    return resultadoConsolidacao;
+                })
+            );
+
+
+            return await Task.WhenAll(tasks);
+        }
+
+        private void AtualizarView(IEnumerable<string> result, TimeSpan elapsedTime)
         {
             var tempoDecorrido = $"{ elapsedTime.Seconds }.{ elapsedTime.Milliseconds} segundos!";
-            var mensagem = $"Processamento de {result.Count} clientes em {tempoDecorrido}";
+            var mensagem = $"Processamento de {result.Count()} clientes em {tempoDecorrido}";
 
             LstResultados.ItemsSource = result;
             TxtTempo.Text = mensagem;
