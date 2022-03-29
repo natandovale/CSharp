@@ -34,7 +34,7 @@
                     Padding="10"
                     IsEnabled="False"
                     Grid.Column="2"
-                    Click="BtnProcessar_Click">
+                    Click="BtnCancelar_Click">
                 Cancelar
             </Button>
 
